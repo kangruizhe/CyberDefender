@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: url('https://th.bing.com/th/id/OIP.W-8HKNmkSqAmRnE0Fy5w3wHaHa?rs=1&pid=ImgDetMain'); /* 添加背景图像 */
+    background-image: url('images/blue.jfif'); /* 添加背景图像 */
     background-size: cover; /* 确保背景图片覆盖整个页面 */
     background-position: center; /* 背景图片居中显示 */
     background-repeat: no-repeat; /* 防止背景图片重复 */
