@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Start Interface -->
+    <div id="startScreen" class="screen">
+        <h1>欢迎来到网络安全小游戏</h1>
+        <button id="startButton">开始</button>
+    </div>
+
+    <!-- Directory Interface -->
+    <div id="directoryScreen" class="screen" style="display: none;">
+        <h2>请选择你要进行的小游戏</h2>
+        <button class="gameButton" id="passwordGameButton">安全密码生成器</button>
+        <button class="gameButton" id="phishingGameButton">钓鱼邮件识别</button>
+        <button class="gameButton" id="socialGameButton">社交工程防御</button>
+    </div>
+
+    <!-- Game 1: Security Password Generator -->
+    <div id="passwordGameScreen" class="screen" style="display: none;">
+        <h2>安全密码生成器</h2>
+        <label for="length">密码长度（至少为8）:</label>
+        <input type="number" id="length" name="length" min="8" max="20" value="12">
+        <br>
+        <input type="checkbox" id="includeUppercase" name="includeUppercase" checked>
+        <label for="includeUppercase">包含大写字母</label>
+        <br>
+        <input type="checkbox" id="includeNumbers" name="includeNumbers" checked>
+        <label for="includeNumbers">包括数字</label>
+        <br>
+        <input type="checkbox" id="includeSymbols" name="includeSymbols" checked>
+        <label for="includeSymbols">包含符号</label>
+        <br><br>
+        <button id="generatePassword">生成密码</button>
+        <p id="generatedPassword"></p>
+        <!-- Password generator content goes here -->
+        <button id="backToDirectory1">返回目录</button>
+    </div>
+
+    <!-- Game 2: Phishing Email Identification -->
+    <div id="phishingGameScreen" class="screen" style="display: none;">
+        <h2>钓鱼邮件识别</h2>
+        <h2>Phishing Email Identification</h2>
+        <p>请选择您认为是钓鱼邮件的邮件：</p>
+
+        <!-- 页码导航 -->
+        <div id="pagination">
+            <button id="prevPage">上一页</button>
+            <span id="pageInfo"></span>
+            <button id="nextPage">下一页</button>
+        </div>
+    
+        <!-- 邮件列表 -->
+        <div id="emailList">
+            <!-- 邮件列表将在JavaScript中动态生成 -->
+        </div>
+    
+        <button id="checkPhishing">检查答案</button>
+        <p id="phishingResult"></p>    
+        <button id="backToDirectory2">返回目录</button>
+    </div>
+
+    <!-- Game 3: Social Engineering Defense -->
+    <div id="socialGameScreen" class="screen" style="display: none;">
+        <h2>社交工程防御</h2>
+        <p id="scenarioText"></p>
+        <div id="choices"></div>
+        <p id="feedbackText"></p>
+    
+        <!-- 页码导航 -->
+        <div id="pagination">
+            <button id="prevDialogue" style="display: none;">上一对话</button>
+            <button id="nextDialogue">下一对话</button>
+        </div>
+        <button id="backToDirectory3">返回目录</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
